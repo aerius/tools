@@ -43,5 +43,18 @@ To use Spotless with AERIUS projects add the following in the `pom.xml` in `plug
   </plugin>
 ```
 
+The tools jar is found in the AERIUS nexus repository.
+Add the following to the `pom.xml`
+
+```
+  <repositories>
+    <repository>
+      <id>aerius-nexus-public</id>
+      <name>AERIUS Nexus repository</name>
+      <url>https://nexus.aerius.nl/repository/maven-public/</url>
+    </repository>
+  </repositories>
+```
+
 Spotless can be run with maven.
 Either by checking `mvn spotless:check` or by automatically correcting with `mvn spotless:apply`.
