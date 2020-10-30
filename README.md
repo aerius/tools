@@ -36,8 +36,8 @@ To use Spotless with AERIUS projects add the following in the `pom.xml` in `plug
     <dependencies>
       <dependency>
       <groupId>nl.aerius</groupId>
-      <version>1.0.0-SNAPSHOT</version>
       <artifactId>tools</artifactId>
+      <version>1.0.0</version>
       </dependency>
     </dependencies>
   </plugin>
