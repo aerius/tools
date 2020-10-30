@@ -18,9 +18,28 @@ To use Spotless with AERIUS projects add the following in the `pom.xml` in `plug
     <artifactId>spotless-maven-plugin</artifactId>
     <version>${spotless.version}</version>
     <configuration>
+      <formats>
+        <format>
+          <includes>
+            <include>pom.xml</include>
+          </includes>
+          <licenseHeader>
+            <file>pom-xml-header.txt</file>
+            <delimiter>&lt;project</delimiter>
+          </licenseHeader>
+          <trimTrailingWhitespace />
+          <endWithNewline />
+          <eclipseWtp>
+            <type>XML</type>
+            <files>
+              <file>pom-xml.prefs</file>
+            </files>
+           </eclipseWtp>
+        </format>
+      </formats>
       <java>
         <includes>
-          <include>src/**/java/nl/overheid/aerius/**/*.java</include>
+          <include>src/*/java/nl/overheid/aerius/**/*.java</include>
         </includes>
         <licenseHeader>
           <file>checkstyle-header.txt</file>
@@ -35,9 +54,9 @@ To use Spotless with AERIUS projects add the following in the `pom.xml` in `plug
     </configuration>
     <dependencies>
       <dependency>
-      <groupId>nl.aerius</groupId>
-      <artifactId>tools</artifactId>
-      <version>1.0.0</version>
+        <groupId>nl.aerius</groupId>
+        <artifactId>tools</artifactId>
+        <version>1.0.0</version>
       </dependency>
     </dependencies>
   </plugin>
@@ -47,13 +66,13 @@ The tools jar is found in the AERIUS nexus repository.
 Add the following to the `pom.xml`
 
 ```
-  <repositories>
-    <repository>
+  <pluginRepositories>
+    <pluginRepository>
       <id>aerius-nexus-public</id>
-      <name>AERIUS Nexus repository</name>
+      <name>AERIUS Nexus Repository</name>
       <url>https://nexus.aerius.nl/repository/maven-public/</url>
-    </repository>
-  </repositories>
+    </pluginRepository>
+  </pluginRepositories>
 ```
 
 Spotless can be run with maven.
