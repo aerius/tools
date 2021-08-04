@@ -1,9 +1,11 @@
 #Organize Import Order
-#Fri Mar 14 09:49:42 CET 2014
-# Priority ordering for our own
-9=nl
+#Wed Aug 04 14:19:42 CET 2021
+# Priority ordering for our own imports
+10=nl
+
 # Lower priority for other imports
-8=jsinterop
+9=jsinterop
+8=elemental2
 7=cucumber
 6=ol
 5=io
