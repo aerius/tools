@@ -40,7 +40,7 @@
       </pluginExecutionFilter>
       <action>
         <execute>
-           <runOnIncremental>false</runOnIncremental>
+          <runOnIncremental>false</runOnIncremental>
         </execute>
       </action>
     </pluginExecution>
@@ -54,8 +54,8 @@
         <versionRange>[0.0,)</versionRange>
       </pluginExecutionFilter>
       <action>
-       <execute>
-         <runOnIncremental>true</runOnIncremental>
+        <execute>
+          <runOnIncremental>true</runOnIncremental>
         </execute>
       </action>
     </pluginExecution>
@@ -69,8 +69,8 @@
         <versionRange>[0.0,)</versionRange>
       </pluginExecutionFilter>
       <action>
-       <execute>
-         <runOnIncremental>true</runOnIncremental>
+        <execute>
+          <runOnIncremental>true</runOnIncremental>
         </execute>
       </action>
     </pluginExecution>
@@ -84,8 +84,23 @@
         <versionRange>[0.0,)</versionRange>
       </pluginExecutionFilter>
       <action>
-       <execute>
-         <runOnIncremental>true</runOnIncremental>
+        <execute>
+          <runOnIncremental>true</runOnIncremental>
+        </execute>
+      </action>
+    </pluginExecution>
+    <pluginExecution>
+      <pluginExecutionFilter>
+        <groupId>nl.aerius</groupId>
+        <artifactId>sld-generator-maven-plugin</artifactId>
+        <goals>
+          <goal>generate-sld</goal>
+        </goals>
+        <versionRange>[0.0,)</versionRange>
+      </pluginExecutionFilter>
+      <action>
+        <execute>
+          <runOnIncremental>true</runOnIncremental>
         </execute>
       </action>
     </pluginExecution>
