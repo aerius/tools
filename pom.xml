@@ -52,8 +52,8 @@
   </distributionManagement>
 
   <scm>
-    <connection>scm:git:ssh//git@gitlab.com:AERIUS/tools.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:aerius/tools.git</developerConnection>
+    <connection>scm:git:ssh//git@github.com/aerius/tools.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/aerius/tools.git</developerConnection>
     <url>https://github.com/AERIUS/tools</url>
   </scm>
 
