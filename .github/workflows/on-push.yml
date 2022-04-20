@@ -8,6 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check out github-actions repo
+        uses: actions/checkout@v2
+        with:
+          repository: aerius/github-actions
+          path: aerius-github-actions
+          ref: main
+
       - uses: aerius/github-actions/events/push-event-action@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
