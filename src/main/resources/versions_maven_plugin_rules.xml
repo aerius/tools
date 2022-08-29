@@ -41,5 +41,11 @@
         <ignoreVersion type="regex">.*[-_\.](b)[-_\.]?[0-9]?.*</ignoreVersion>
       </ignoreVersions>
     </rule>
+    <!-- Ensure we use a 9.XYZ version for jetty. Version 10 uses SLF4J 2, and version 11 uses Jakarta annotations -->
+    <rule groupId="org.eclipse.jetty">
+      <ignoreVersions>
+        <ignoreVersion type="regex">^\d*[^9]\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
   </rules>
 </ruleset>
