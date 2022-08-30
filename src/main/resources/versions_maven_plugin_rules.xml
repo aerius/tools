@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset xmlns="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  comparisonMethod="maven"
+  xsi:schemaLocation="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0 https://mojo.codehaus.org/versions-maven-plugin/xsd/rule-2.0.0.xsd">
+  <ignoreVersions>
+    <ignoreVersion type="regex">.*[-_\.](alpha|Alpha|ALPHA|beta|Beta|BETA|rc|RC|M|m|EA|Dev|CR|pre)[-_\.]?[0-9]?.*</ignoreVersion>
+  </ignoreVersions>
+  <rules>
+    <!-- For aerius, we want to skip anything starting with 4 digits (those are for example '2020-PRERELEASE') -->
+    <rule groupId="nl.overheid.aerius">
+      <ignoreVersions>
+        <ignoreVersion type="regex">^\d{4}.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="nl.aerius">
+      <ignoreVersions>
+        <ignoreVersion type="regex">^\d{4}.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <!-- Avoid 20040616 as a version for commons-collections, they now use x.y.z strategy -->
+    <rule groupId="commons-collections">
+      <ignoreVersions>
+        <ignoreVersion type="regex">^\d{4,}.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <!-- Avoid 20030911 as a version for antlr, they now use x.y.z strategy -->
+    <rule groupId="antlr">
+      <ignoreVersions>
+        <ignoreVersion type="regex">^\d{4,}.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <!-- Avoid 8.2.0-gwt2_8 as a version for com.github.tdesjardins, we want the version without specific gwt version (which should be latest)-->
+    <rule groupId="com.github.tdesjardins">
+      <ignoreVersions>
+        <ignoreVersion type="regex">.*[-_\.](gwt)[-_\.]?[0-9]?.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <!-- Avoid 2.4.0-b180830.0359 as a version for javax.xml.bind, these are release candidates it looks like-->
+    <rule groupId="javax.xml.bind">
+      <ignoreVersions>
+        <ignoreVersion type="regex">.*[-_\.](b)[-_\.]?[0-9]?.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <!-- Ensure we use a 9.XYZ version for jetty. Version 10 uses SLF4J 2, and version 11 uses Jakarta annotations -->
+    <rule groupId="org.eclipse.jetty">
+      <ignoreVersions>
+        <ignoreVersion type="regex">^\d*[^9]\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+  </rules>
+</ruleset>
