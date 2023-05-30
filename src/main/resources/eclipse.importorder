@@ -1,15 +1,16 @@
 #Organize Import Order
-#Wed Aug 04 14:19:42 CET 2021
 # Priority ordering for our own imports
-10=nl
+12=nl
 # Lower priority for other imports
-9=jsinterop
-8=elemental2
-7=cucumber
-6=ol
-5=io
-4=net
-3=com
-2=org
+11=reactor
+10=jsinterop
+9=elemental2
+8=cucumber
+7=ol
+6=io
+5=net
+4=com
+3=org
+2=jakarta
 1=javax
 0=java
