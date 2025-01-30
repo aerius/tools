@@ -1,16 +1,14 @@
 #Organize Import Order
-# Priority ordering for our own imports
-12=nl
-# Lower priority for other imports
-11=reactor
-10=jsinterop
-9=elemental2
-8=cucumber
-7=ol
-6=io
-5=net
-4=com
-3=org
-2=jakarta
-1=javax
 0=java
+1=javax
+10=jsinterop
+11=reactor
+12=nl
+2=jakarta
+3=org
+4=com
+5=net
+6=io
+7=ol
+8=cucumber
+9=elemental2
