@@ -26,7 +26,11 @@
   <name>AERIUS Tools</name>
   <description>AERIUS eclipse configuration and setup files</description>
 
-  <url>https://www.aerius.nl</url>
+  <url>https://link.aerius.nl/website</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
   <organization>
     <name>State of the Netherlands</name>
